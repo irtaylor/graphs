@@ -25,6 +25,10 @@ int main() {
   add_edge(wg, 4, 5, 1);
   print_graph(wg);
 
+
+  cout << "Dijkstra's Algorithm:" << endl;
+  dijkstras_shortest_path(wg, 0);
+
   delete wg;
   return 0;
 }

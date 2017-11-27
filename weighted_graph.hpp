@@ -3,7 +3,6 @@
 
 #include <vector>
 using std::vector;
-
 using std::pair;
 
 
@@ -14,9 +13,12 @@ struct weighted_graph {
   ~weighted_graph();
 };
 
+//void priority_queue_test();
 
 void print_graph(weighted_graph* wg);
 
 void add_edge(weighted_graph* wg, int s, int v, int weight);
+
+void dijkstras_shortest_path(weighted_graph *wg, int s);
 
 #endif /* WEIGHTED_GRAPH_HPP_ */
