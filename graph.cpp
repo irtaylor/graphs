@@ -21,19 +21,16 @@ TODO:
 graph::graph(int num_v) {
   size = num_v;
   adj = new vector<int>[num_v]; // an array of num_v integer vectors
-  wgt = new vector<int>[num_v];
 }
 
 graph::~graph() {
   delete[] this->adj;
-  delete[] this->wgt;
 }
 
 void add_edge(graph* g, int s, int v) {
   g->adj[s].push_back(v);
   g->adj[v].push_back(s);
 }
-
 
 /* TODO: return something useful maybe... */
 void BFS(graph* g, int s) {
@@ -74,6 +71,19 @@ void DFS(graph* g, int s) {
 }
 
 
+// dijkstra's algorithm
+// s := start vertex
+// v := destination vertex
+// X := vertices dealth with
+// V := vertices not dealt with
+// A := shortest path distances from src to all other vertices
+// e.g. A[s] = 0
+
+/*
+while X != V
+
+*/
+
 
 void print_graph(graph* g) {
   for(int i = 0; i < g->size; i += 1) {
@@ -84,3 +94,13 @@ void print_graph(graph* g) {
     cout << "NULL" << endl;
   }
 }
+
+/*void print_graph_wgt(graph* g) {
+  for(int i = 0; i < g->size; i += 1) {
+    cout << "[" << i << "]: -> ";
+    for(std::vector<int>::const_iterator j = g->wgt[i].begin(); j != g->wgt[i].end(); j += 1) {
+      cout << *j << " -> ";
+    }
+    cout << "NULL" << endl;
+  }
+}*/

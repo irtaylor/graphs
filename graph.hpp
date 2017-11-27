@@ -6,8 +6,7 @@ using std::vector;
 
 struct graph {
   int size;
-  vector<int> *adj;
-  vector<int> *wgt;
+  vector<int>* adj;
   graph(int num_v);
   ~graph();
 };
