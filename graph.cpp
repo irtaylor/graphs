@@ -1,4 +1,4 @@
-#include "graph.h"
+#include "graph.hpp"
 
 #include <iostream>
 using std::cout;
@@ -72,6 +72,8 @@ void DFS(graph* g, int s) {
   _DFS_helper(g, s, explored);
   delete[] explored;
 }
+
+
 
 void print_graph(graph* g) {
   for(int i = 0; i < g->size; i += 1) {

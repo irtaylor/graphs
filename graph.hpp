@@ -1,5 +1,5 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef GRAPH_HPP_
+#define GRAPH_HPP_
 
 #include <vector>
 using std::vector;
@@ -19,4 +19,4 @@ void print_graph(graph* g);
 
 void add_edge(graph* g, int s, int v);
 
-#endif /* GRAPH_H */
+#endif /* GRAPH_HPP_ */
