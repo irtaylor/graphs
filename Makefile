@@ -1,6 +1,8 @@
 CXX = g++
 CXXFLAGS = -g
 
+# TODO: figure out best way to list dependencies
+
 main: graph.o weighted_graph.o main.cpp # list dependencies
 	$(CXX) $(CXXFLAGS) -o main graph.o weighted_graph.o main.cpp
 

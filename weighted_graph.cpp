@@ -7,6 +7,8 @@ using std::endl;
 #include <queue>
 using std::queue;
 
+using std::make_pair;
+
 /*
 TODO:
   - make graph an abstract class
@@ -17,7 +19,7 @@ TODO:
 
 weighted_graph::weighted_graph(int num_v) {
   size = num_v;
-  adj = new vector<pair<int,int> >[num_v]; // an array of num_v integer vectors
+  adj = new vector<pair<int,int> >[num_v]; // pair.first is the vertex, pair.second is the edge weight
 }
 
 weighted_graph::~weighted_graph() {
@@ -44,10 +46,10 @@ while X != V
 
 void print_graph(weighted_graph* wg) {
   for(int i = 0; i < wg->size; i += 1) {
-    cout << "[" << i << "]: -> ";
+    cout << "[" << i << "]: -> (";
     for(auto j = wg->adj[i].begin(); j != wg->adj[i].end(); j += 1) {
-      cout << j->first << ", " << j->second << " -> ";
+      cout << j->first << ", " << j->second << ") -> (";
     }
-    cout << "NULL" << endl;
+    cout << "NULL)" << endl;
   }
 }

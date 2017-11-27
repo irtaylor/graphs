@@ -4,9 +4,8 @@
 #include <vector>
 using std::vector;
 
-#include <utility>
 using std::pair;
-using std::make_pair;
+
 
 struct weighted_graph {
   int size;
